@@ -1,8 +1,10 @@
 const container = document.querySelector('#container');
 
 for (let i=0; i < (16*16); i++){
-    const box = document.createElement('div');
-    box.classList.add('square');
-    container.appendChild(box);
+    const square = document.createElement('div');
+    square.classList.add('square');
+    square.addEventListener('mouseover', function(e){
+        e.target.style.backgroundColor = 'red';
+    });
+    container.appendChild(square);
 }
-
